@@ -187,12 +187,12 @@ if (sliderNews) {
 // ===========================Прогресс бар при сколле======================
 const progress = document.querySelector('.progress');
 window.addEventListener('scroll', progressBar);
-
 function progressBar(e) {
 	let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
 	let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 	let persent = windowScroll / windowHeight * 100;
 	progress.style.width = persent + '%';
+	progress.classList.add('_scroll');
 }
 // ===========================Прогресс бар при сколле======================
 // ===========================read more======================
@@ -538,6 +538,8 @@ bar.animate(1.0, {
 	duration: 2000,
 });  // Value from 0.0 to 1.0
 // easyIn, easeOut, easeInOut или bounce.
+
+
 //====================isotope filter========================================
 const elem = document.querySelector('.portfolio__grid');
 const iso = new Isotope(elem, {

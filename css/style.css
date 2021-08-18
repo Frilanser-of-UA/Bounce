@@ -326,12 +326,17 @@ body._lock {
 
 .progress {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 3px;
-  background-color: rgba(236, 60, 60, 0.95);
-  z-index: 100;
+  background-color: #e93232;
+  z-index: 10;
+  display: none;
+}
+
+.progress._scroll {
+  display: block;
 }
 
 .title {
